@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ElectronicsMSDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblBank">
+    <Key>
+      <PropertyRef Name="BankCode" />
+    </Key>
+    <Property Name="BankCode" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblBankTransaction">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+    </Key>
+    <Property Name="TrackId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionID" Type="Int32" Nullable="false" />
+    <Property Name="TransactionDate" Type="DateTime" Precision="3" />
+    <Property Name="TransactionType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Bank" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Deposit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Withdraw" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Remarks" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ChequeNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ChequeDate" Type="DateTime" Precision="3" />
+    <Property Name="ChequeDetails" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Lmdt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblCategory">
+    <Key>
+      <PropertyRef Name="CatId" />
+    </Key>
+    <Property Name="CatId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblCompany">
+    <Key>
+      <PropertyRef Name="ComId" />
+    </Key>
+    <Property Name="ComId" Type="Int32" Nullable="false" />
+    <Property Name="StartWith" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Contact1" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+    <Property Name="Contact2" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyMoto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyLogo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="st_dt" Type="DateTime" Precision="3" />
+    <Property Name="ed_dt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblCostCenter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblCostElement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CostCenterId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblCustomer">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="CustId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Mobile" Type="String" MaxLength="29" FixedLength="false" Unicode="true" />
+    <Property Name="ThanaId" Type="Int32" />
+    <Property Name="ViId" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Lmdt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblCustomerWisePriceSetup">
+    <Key>
+      <PropertyRef Name="CustId" />
+      <PropertyRef Name="ItemCode" />
+    </Key>
+    <Property Name="CustId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ItemCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Remarks" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="DeptId" />
+    </Key>
+    <Property Name="DeptId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblDesignation">
+    <Key>
+      <PropertyRef Name="DesigId" />
+    </Key>
+    <Property Name="DesigId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblDistrict">
+    <Key>
+      <PropertyRef Name="DistId" />
+    </Key>
+    <Property Name="DistId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblEmail">
+    <Key>
+      <PropertyRef Name="RPTCATEGORY" />
+    </Key>
+    <Property Name="MODULEID" Type="Int32" Nullable="false" />
+    <Property Name="UIID" Type="Int32" Nullable="false" />
+    <Property Name="RPTCATEGORY" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="USERNAME" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FROMEMAILID" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SUBJECT" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BODY" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LMBY" Type="String" MaxLength="21" FixedLength="false" Unicode="true" />
+    <Property Name="LMDT" Type="DateTime" Precision="3" />
+    <Property Name="IPADDRESS" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="MACHINEID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FILEPATH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EMAILPWD" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SMTPHOST" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PORT" Type="Int32" />
+    <Property Name="SSLSTATUS" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblExpense">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="CostHead" Type="Int32" />
+    <Property Name="CostElement" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="HandedTo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Remarks" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Lmdt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblItem">
+    <Key>
+      <PropertyRef Name="ItemName" />
+    </Key>
+    <Property Name="ItemCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SrlCode" Type="Int32" />
+    <Property Name="ItemName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ItemNameBangla" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ItemCatId" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="Brand" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Origin" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ItemSize" Type="Int32" />
+    <Property Name="ItemType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ItemUnit" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PurRate" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SalesRate" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="MinQty" Type="Int32" />
+    <Property Name="MaxQty" Type="Int32" />
+    <Property Name="Pack" Type="Int32" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="UserId" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Lmdt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblItemSize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblLendBorrow">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Lend" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Borrow" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CustId" Type="Int32" />
+    <Property Name="Remarks" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Lmdt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblLogIn">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblMoneyReceived">
+    <Key>
+      <PropertyRef Name="CustCode" />
+      <PropertyRef Name="ReceivedDate" />
+      <PropertyRef Name="track_id" />
+    </Key>
+    <Property Name="CustCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SalesId" Type="Int32" />
+    <Property Name="ReceivedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ReceiveAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PayMode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChequeNo" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="ChequeDt" Type="DateTime" Precision="3" />
+    <Property Name="IssueBank" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="DepositBank" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ChequeDetails" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Particulars" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Remarks" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="lmdt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="userid" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="track_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tblNotification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblPacking">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPayment">
+    <Key>
+      <PropertyRef Name="TrackId" />
+      <PropertyRef Name="SupplierId" />
+      <PropertyRef Name="BillNo" />
+    </Key>
+    <Property Name="TrackId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BillNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PayMode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PayDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PayAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PaidAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DueAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ChequeNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ChequeDate" Type="DateTime" Precision="3" />
+    <Property Name="IssueBank" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DepositBank" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BankName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ChequeDetails" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Lmdt" Type="DateTime" Precision="3" />
+    <Property Name="PurID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblPurchaseDTL">
+    <Key>
+      <PropertyRef Name="PurId" />
+      <PropertyRef Name="ItemCode" />
+    </Key>
+    <Property Name="PurId" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ItemCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Qty" Type="Int32" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Lmdt" Type="DateTime" Precision="3" />
+    <Property Name="SupplierId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblPurchaseHDR">
+    <Key>
+      <PropertyRef Name="PurId" />
+    </Key>
+    <Property Name="PurId" Type="Int32" Nullable="false" />
+    <Property Name="PurDate" Type="DateTime" Precision="3" />
+    <Property Name="BillNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VoucherNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierId" Type="Int32" />
+    <Property Name="Remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TaxVAT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="VAT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OtherCost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="LabourCost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Paid" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Due" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PayMode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ChequeNo" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="ChequeDt" Type="DateTime" Precision="3" />
+    <Property Name="DepositBank" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BankName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ChequeDetails" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Lmdt" Type="DateTime" Precision="3" />
+    <Property Name="Balance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OpBalance" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblRecipient">
+    <Key>
+      <PropertyRef Name="CustId" />
+    </Key>
+    <Property Name="CustId" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="selected" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblSalesDTL">
+    <Key>
+      <PropertyRef Name="SalesId" />
+      <PropertyRef Name="CustId" />
+      <PropertyRef Name="ItemCode" />
+    </Key>
+    <Property Name="SalesId" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CustId" Type="Int32" Nullable="false" />
+    <Property Name="ItemCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Qty" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="tblSalesHDR">
+    <Key>
+      <PropertyRef Name="SalesId" />
+    </Key>
+    <Property Name="SalesId" Type="Int32" Nullable="false" />
+    <Property Name="SalesDate" Type="DateTime" Precision="3" />
+    <Property Name="CustId" Type="Int32" />
+    <Property Name="ChallanNo" Type="Int32" />
+    <Property Name="AmendmentDate" Type="DateTime" Precision="3" />
+    <Property Name="BillNo" Type="Int32" />
+    <Property Name="VoucherNo" Type="Int32" />
+    <Property Name="ShipTo" Type="Int32" />
+    <Property Name="Remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Reference" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TaxVAT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="VAT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="LabourCost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OtherCost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Paid" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Due" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PayMode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ChequeNo" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="ChequeDt" Type="DateTime" Precision="3" />
+    <Property Name="DepositBank" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BankName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ChequeDetails" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Lmdt" Type="DateTime" Precision="3" />
+    <Property Name="Balance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OpBalance" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblSalesReturn">
+    <Key>
+      <PropertyRef Name="TrackId" />
+    </Key>
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="CustCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Qty" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Rate" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Remarks" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dt" Type="DateTime" Precision="3" />
+    <Property Name="TrackId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tblStock">
+    <Key>
+      <PropertyRef Name="ItemCode" />
+    </Key>
+    <Property Name="ItemCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StockQty" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="MinQty" Type="Int32" />
+    <Property Name="MaxQty" Type="Int32" />
+    <Property Name="Lmdt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblSupplier">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="SupplierId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Mobile" Type="String" MaxLength="29" FixedLength="false" Unicode="true" />
+    <Property Name="ThanaId" Type="Int32" />
+    <Property Name="ViId" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Lmdt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblThana">
+    <Key>
+      <PropertyRef Name="ThanaId" />
+    </Key>
+    <Property Name="ThanaId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DistId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ConPassword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblVillage">
+    <Key>
+      <PropertyRef Name="ViId" />
+    </Key>
+    <Property Name="ViId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ThanaId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblWeight">
+    <Key>
+      <PropertyRef Name="WgtId" />
+    </Key>
+    <Property Name="WgtId" Type="Int32" Nullable="false" />
+    <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="ElectronicsMSDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblBanks" EntityType="Self.tblBank" />
+    <EntitySet Name="tblBankTransactions" EntityType="Self.tblBankTransaction" />
+    <EntitySet Name="tblCategories" EntityType="Self.tblCategory" />
+    <EntitySet Name="tblCompanies" EntityType="Self.tblCompany" />
+    <EntitySet Name="tblCostCenters" EntityType="Self.tblCostCenter" />
+    <EntitySet Name="tblCostElements" EntityType="Self.tblCostElement" />
+    <EntitySet Name="tblCustomers" EntityType="Self.tblCustomer" />
+    <EntitySet Name="tblCustomerWisePriceSetups" EntityType="Self.tblCustomerWisePriceSetup" />
+    <EntitySet Name="tblDepartments" EntityType="Self.tblDepartment" />
+    <EntitySet Name="tblDesignations" EntityType="Self.tblDesignation" />
+    <EntitySet Name="tblDistricts" EntityType="Self.tblDistrict" />
+    <EntitySet Name="tblEmails" EntityType="Self.tblEmail" />
+    <EntitySet Name="tblExpenses" EntityType="Self.tblExpense" />
+    <EntitySet Name="tblItems" EntityType="Self.tblItem" />
+    <EntitySet Name="tblItemSizes" EntityType="Self.tblItemSize" />
+    <EntitySet Name="tblLendBorrows" EntityType="Self.tblLendBorrow" />
+    <EntitySet Name="tblLogIns" EntityType="Self.tblLogIn" />
+    <EntitySet Name="tblMoneyReceiveds" EntityType="Self.tblMoneyReceived" />
+    <EntitySet Name="tblNotifications" EntityType="Self.tblNotification" />
+    <EntitySet Name="tblPackings" EntityType="Self.tblPacking" />
+    <EntitySet Name="tblPayments" EntityType="Self.tblPayment" />
+    <EntitySet Name="tblPurchaseDTLs" EntityType="Self.tblPurchaseDTL" />
+    <EntitySet Name="tblPurchaseHDRs" EntityType="Self.tblPurchaseHDR" />
+    <EntitySet Name="tblRecipients" EntityType="Self.tblRecipient" />
+    <EntitySet Name="tblSalesDTLs" EntityType="Self.tblSalesDTL" />
+    <EntitySet Name="tblSalesHDRs" EntityType="Self.tblSalesHDR" />
+    <EntitySet Name="tblSalesReturns" EntityType="Self.tblSalesReturn" />
+    <EntitySet Name="tblStocks" EntityType="Self.tblStock" />
+    <EntitySet Name="tblSuppliers" EntityType="Self.tblSupplier" />
+    <EntitySet Name="tblThanas" EntityType="Self.tblThana" />
+    <EntitySet Name="tblUsers" EntityType="Self.tblUser" />
+    <EntitySet Name="tblVillages" EntityType="Self.tblVillage" />
+    <EntitySet Name="tblWeights" EntityType="Self.tblWeight" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,2 @@
+﻿[Sp_ValidationAll] isnull in mode 1
+-- Will I consider ? data/items will come in sales combo those are in purchase

@@ -1,0 +1,106 @@
+﻿=======Dashboard=======
+With diff color, 
+1. Top 5 Min Items
+1. Top 5 Max Items
+1. Top 5 Min Sales
+1. Top 5 Max Sales
+1. Top 5 Min Purchase
+1. Top 5 Max Purchase
+1. Top 5 
+1. Top 5 Min Items
+
+Total Villages
+Total Posts
+Total Thanas
+Total District
+Total Customers
+Total Supplier
+Total Categories
+Total Items Categoris wise
+Total Sales
+Total Due
+Total Cash
+====================design
+alternate row color: if recordnumber mod 2=0 then crSilver else noColor
+
+=======Advantages==========
+    Easy to use
+    Simple to learn, intuitive
+    Customizable
+    Notifies you when to take action
+    Mobile – accessiblD:\Project For Life Time\SalesMS\SalesMS\Notes.txte everywhere.
+    Good sales reporting
+    Cross-platform integrations
+    Good looking, visual
+	Business Inteligency, Customer shorting & Take care=>contact
+	Profit loss deduct & prediction
+	Alert which product is excess(max), low(min)
+========Need to publish=========
+db, crystal report 13.0.9.1312, telerik, 
+
+
+delete from tblVillages
+delete from tblPosts
+delete from tblThanas
+delete from tblDistricts
+
+delete from tblWeights
+delete from tblCategory
+delete from tblUsers
+delete from tblCostCenters
+delete from tblCostElements
+delete from tblPacking
+delete from tblItemSize
+
+delete from tblCustomers
+delete from tblSuppliers
+delete from tblDepartments
+delete from tblDesignations
+delete from tblExpense
+delete from tblItems
+delete from tblMoneyReceived
+delete from tblPayment
+delete from tblPurchaseHDR
+delete from tblPurchaseDTL
+delete from tblSalesHDR
+delete from tblSalesDTL
+delete from tblSalesReturn
+delete from tblStocks
+
+select * from tblCategory
+select * from tblCompany
+select * from tblCustomers
+select * from tblDepartments
+select * from tblDesignations
+select * from tblDistricts
+select * from tblExpense
+select * from tblExpenseHead
+select * from tblItems
+select * from tblLogIn
+select * from tblMoneyReceived
+select * from tblPayment
+select * from tblPosts
+select * from tblPurchaseDTL
+select * from tblPurchaseHDR
+select * from tblSalesDTL
+select * from tblSalesHDR
+select * from tblStock
+select * from tblSuppliers
+select * from tblThanas
+select * from tblThanas
+select * from tblUsers
+select * from tblVillages
+select * from tblWeights
+select * from tblCostCenters
+select * from tblCostElements
+==========================================transaction tables ===================
+select * from tblMoneyReceived
+select * from tblPayment
+select * from tblPurchaseHDR
+select * from tblPurchaseDTL
+select * from tblSalesHDR
+select * from tblSalesDTL
+select * from tblSalesReturn
+select * from tblStocks
+select * from tblExpense
+delete from tblCustomerWisePriceSetup
