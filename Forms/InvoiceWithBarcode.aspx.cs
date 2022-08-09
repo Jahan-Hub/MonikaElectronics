@@ -461,6 +461,11 @@ namespace ElectronicsMS.Forms
                     lblMessage.Text = "Add Item.";
                     return;
                 }
+                if (cmInstallment.SelectedValue != "No Instalment" && dtInstallment.Rows.Count <= 0)
+                {
+                    lblMessage.Text = "You selected "+ cmInstallment.Text + "Installment, but you do not Calculate yet the Installment.";
+                    return;
+                }
 
                 if (hfOnlyPrint.Value != "OnlyPrint")
                 {

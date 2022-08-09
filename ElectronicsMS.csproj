@@ -437,6 +437,12 @@
       <DependentUpon>BankTransaction.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\DailySummaryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailySummaryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\DailyAllTransactions.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1540,6 +1546,7 @@
     <Content Include="PNG\sales-abstract.gif" />
     <Content Include="PNG\Statistics.png" />
     <Content Include="PNG\Text Bubble.png" />
+    <Content Include="PNG\Undo.png" />
     <Content Include="PNG\User Group.png" />
     <Content Include="PNG\Windows Magnifier.png" />
     <Content Include="PNG\World.png" />
@@ -1572,6 +1579,10 @@
     <EmbeddedResource Include="Reports\BankTransaction.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>BankTransaction.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DailySummaryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DailySummaryReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\DailyAllTransactions.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

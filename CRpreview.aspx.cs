@@ -26,7 +26,7 @@ namespace ElectronicsMS
                     cp.SetDataSource(dt);
                     CrystalReportViewer1.ReportSource = cp;
                     //CrystalReportViewer1.DisplayStatusbar = false;
-                    CrystalReportViewer1.DisplayGroupTree = false;
+                    //CrystalReportViewer1.DisplayGroupTree = false;
 
                     btnPrint.TabIndex = 0;
                     btnPrint.Focus();

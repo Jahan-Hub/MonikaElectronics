@@ -40,7 +40,14 @@ namespace ElectronicsMS.Forms.ReportForms
                 SqlCommand Cmd;
                 Cmd = new SqlCommand("Sp_DailyTransactions", con);
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = 1;
+                if(cmReportFormat.SelectedValue=="Daily Transaction")
+                {
+                    Cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = 1;
+                }
+                else
+                {
+                    Cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = 3;
+                }
 
                 if (dpStartDate.SelectedDate != null)
                     Cmd.Parameters.Add("@FromDate", SqlDbType.DateTime).Value = dpStartDate.SelectedDate;
@@ -48,50 +55,60 @@ namespace ElectronicsMS.Forms.ReportForms
                 DataSet ds = new DataSet();
                 adpt.Fill(ds);
                 Cmd.Dispose();
-                ReportDocument subPurchase;
-                ReportDocument subSales;
-                ReportDocument subExpense;
-                ReportDocument subPayment;
-                ReportDocument subMoneyReceived;
-                ReportDocument subBankTransaction;
-                ReportDocument subLendBorrow;
-
-                DataTable dtRptPurchase = ds.Tables[0];
-                DataTable dtRptSales = ds.Tables[1];
-                DataTable dtRptExpense = ds.Tables[2];
-                DataTable dtRptPayment = ds.Tables[3];
-                DataTable dtRptMoneyReceived = ds.Tables[4];
-                DataTable dtRptBankTransaction = ds.Tables[5];
-                DataTable dtRptLendBorrow = ds.Tables[6];
-
-                Cmd.Dispose();
 
                 string tempPath = "";
                 string reportName = "";
 
-                AppEnv.Current.p_rptObject = "~/Reports/DailyAllTransactions.rpt";
-                tempPath = @System.IO.Path.GetTempPath() + "DailyAllTransactions";
-                reportName = "DailyAllTransactions";
+                DataTable dtRptPurchase = ds.Tables[0];
 
-                AppEnv.Current.p_rptSource.Load(Server.MapPath(AppEnv.Current.p_rptObject.ToString()));
+                if (cmReportFormat.SelectedValue == "Daily Transaction")
+                {
+                    ReportDocument subPurchase;
+                    ReportDocument subSales;
+                    ReportDocument subExpense;
+                    ReportDocument subPayment;
+                    ReportDocument subMoneyReceived;
+                    ReportDocument subBankTransaction;
+                    ReportDocument subLendBorrow;
 
-                subPurchase = AppEnv.Current.p_rptSource.OpenSubreport("rptSubSales.rpt");
-                subPurchase.SetDataSource(dtRptSales);
-                subSales = AppEnv.Current.p_rptSource.OpenSubreport("rptSubSales.rpt");
-                subSales.SetDataSource(dtRptSales);
-                subExpense = AppEnv.Current.p_rptSource.OpenSubreport("rptSubExpense.rpt");
-                subExpense.SetDataSource(dtRptExpense);
-                subPayment = AppEnv.Current.p_rptSource.OpenSubreport("rptSubPayment.rpt");
-                subPayment.SetDataSource(dtRptPayment);
-                subMoneyReceived = AppEnv.Current.p_rptSource.OpenSubreport("rptSubMoneyReceived.rpt");
-                subMoneyReceived.SetDataSource(dtRptMoneyReceived);
-                subBankTransaction = AppEnv.Current.p_rptSource.OpenSubreport("rptSubBankTransaction.rpt");
-                subBankTransaction.SetDataSource(dtRptBankTransaction);
-                subLendBorrow = AppEnv.Current.p_rptSource.OpenSubreport("rptSubLendBorrow.rpt");
-                subLendBorrow.SetDataSource(dtRptLendBorrow);
+                    DataTable dtRptSales = ds.Tables[1];
+                    DataTable dtRptExpense = ds.Tables[2];
+                    DataTable dtRptPayment = ds.Tables[3];
+                    DataTable dtRptMoneyReceived = ds.Tables[4];
+                    DataTable dtRptBankTransaction = ds.Tables[5];
+                    DataTable dtRptLendBorrow = ds.Tables[6];
+
+                    AppEnv.Current.p_rptObject = "~/Reports/DailyAllTransactions.rpt";
+                    tempPath = @System.IO.Path.GetTempPath() + "DailyAllTransactions";
+                    reportName = "DailyAllTransactions";
+
+                    AppEnv.Current.p_rptSource.Load(Server.MapPath(AppEnv.Current.p_rptObject.ToString()));
+
+                    subPurchase = AppEnv.Current.p_rptSource.OpenSubreport("rptSubSales.rpt");
+                    subPurchase.SetDataSource(dtRptSales);
+                    subSales = AppEnv.Current.p_rptSource.OpenSubreport("rptSubSales.rpt");
+                    subSales.SetDataSource(dtRptSales);
+                    subExpense = AppEnv.Current.p_rptSource.OpenSubreport("rptSubExpense.rpt");
+                    subExpense.SetDataSource(dtRptExpense);
+                    subPayment = AppEnv.Current.p_rptSource.OpenSubreport("rptSubPayment.rpt");
+                    subPayment.SetDataSource(dtRptPayment);
+                    subMoneyReceived = AppEnv.Current.p_rptSource.OpenSubreport("rptSubMoneyReceived.rpt");
+                    subMoneyReceived.SetDataSource(dtRptMoneyReceived);
+                    subBankTransaction = AppEnv.Current.p_rptSource.OpenSubreport("rptSubBankTransaction.rpt");
+                    subBankTransaction.SetDataSource(dtRptBankTransaction);
+                    subLendBorrow = AppEnv.Current.p_rptSource.OpenSubreport("rptSubLendBorrow.rpt");
+                    subLendBorrow.SetDataSource(dtRptLendBorrow);
+                }
+                else
+                {
+                    AppEnv.Current.p_rptObject = "~/Reports/DailySummaryReport.rpt";
+                    tempPath = @System.IO.Path.GetTempPath() + "DailySummaryReport";
+                    reportName = "DailySummaryReport";
+
+                    AppEnv.Current.p_rptSource.Load(Server.MapPath(AppEnv.Current.p_rptObject.ToString()));
+                }
 
                 AppEnv.Current.p_rptSource.SetDataSource(dtRptPurchase);
-
 
                 con.Close();
 
@@ -172,5 +189,6 @@ namespace ElectronicsMS.Forms.ReportForms
                 lblMessage.Text = ex.Message;
             }
         }
+
     }
 }

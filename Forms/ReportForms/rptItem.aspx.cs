@@ -12,7 +12,6 @@ namespace ElectronicsMS.Forms
     public partial class rptItem : Page
     {
         SqlConnection con;
-        SqlCommand Cmd;
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack)
