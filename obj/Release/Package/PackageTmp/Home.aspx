@@ -113,7 +113,7 @@
                     <telerik:RadPanelItem runat="server" ImageUrl="~/Images/Info.png" Text="Inquiry">
                     </telerik:RadPanelItem>
                     
-                    <telerik:RadPanelItem runat="server" Text="Sales Returns" Visible="False">
+                    <telerik:RadPanelItem runat="server" Text="Sales Returns" ImageUrl="~/PNG/Undo.png" Visible="True">
                     </telerik:RadPanelItem>
                     
                     <telerik:RadPanelItem runat="server" Text="Users" Visible="False">

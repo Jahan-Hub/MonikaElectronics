@@ -485,12 +485,6 @@
       <DependentUpon>rptSubPurchase.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\rptSubSales.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rptSubSales.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Reports\StockInfo2.cs">
       <DependentUpon>StockInfo2.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -1612,10 +1606,6 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptSubPurchase.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\rptSubSales.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptSubSales.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\StockInfo2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>StockInfo2.cs</LastGenOutput>
@@ -1766,7 +1756,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

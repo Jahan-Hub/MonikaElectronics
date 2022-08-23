@@ -80,7 +80,7 @@
                     </td>
                     <td>
                         <telerik:RadDatePicker ID="RadDatePicker1" runat="server" Width="100px">
-                            <DateInput DisplayDateFormat="dd/MM/yyyy" DateFormat="dd/MM/yyyy" LabelWidth="40%">
+                            <DateInput runat="server" DisplayDateFormat="dd/MM/yyyy" DateFormat="dd/MM/yyyy" LabelWidth="40%">
                                 <EmptyMessageStyle Resize="None"></EmptyMessageStyle>
 
                                 <ReadOnlyStyle Resize="None"></ReadOnlyStyle>
@@ -133,22 +133,25 @@
             </table>
 
         </div>
-        <telerik:RadGrid ID="rgMain" runat="server" AllowMultiRowSelection="True" AutoGenerateColumns="False" OnSelectedIndexChanged="rgMain_SelectedIndexChanged" Width="60%" OnNeedDataSource="rgMain_NeedDataSource">
+        <telerik:RadGrid ID="rgMain" runat="server" AllowMultiRowSelection="True" AutoGenerateColumns="False" Width="60%" OnNeedDataSource="rgMain_NeedDataSource" OnItemCommand="rgMain_ItemCommand" OnEditCommand="rgMain_EditCommand" OnItemUpdated="rgMain_ItemUpdated" OnUpdateCommand="rgMain_UpdateCommand">
             <GroupingSettings CollapseAllTooltip="Collapse all groups"></GroupingSettings>
-<%--            EnablePostBackOnRowClick="True"--%>
-            <ClientSettings Selecting-AllowRowSelect="true" >
+            <%--            EnablePostBackOnRowClick="True"--%>
+            <ClientSettings Selecting-AllowRowSelect="true">
                 <Selecting AllowRowSelect="True" />
 
                 <Scrolling UseStaticHeaders="True" />
 
             </ClientSettings>
-            <MasterTableView>
+            <MasterTableView Caption="Keep the items those you want to return.">
                 <Columns>
-                    <telerik:GridBoundColumn DataField="rowid" Display="False" FilterControlAltText="Filter rowid column" HeaderText="rowid" SortExpression="rowid" UniqueName="rowid">
-                        <ColumnValidationSettings>
-                            <ModelErrorMessage Text="" />
-                        </ColumnValidationSettings>
-                    </telerik:GridBoundColumn>
+                    <telerik:GridTemplateColumn DataField="rowid" Display="False" FilterControlAltText="Filter rowid column" HeaderText="rowid" SortExpression="rowid" UniqueName="rowid">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="rowidTextBox" runat="server" Text='<%# Bind("rowid") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="rowidLabel" runat="server" Text='<%# Eval("rowid") %>'></asp:Label>
+                        </ItemTemplate>
+                    </telerik:GridTemplateColumn>
                     <telerik:GridBoundColumn DataField="SalesId" Display="False" FilterControlAltText="Filter SalesId column" HeaderText="SalesId" SortExpression="SalesId" UniqueName="SalesId">
                         <ColumnValidationSettings>
                             <ModelErrorMessage Text=""></ModelErrorMessage>
@@ -166,12 +169,12 @@
                     </telerik:GridBoundColumn>
                     <telerik:GridBoundColumn DataField="Barcode" FilterControlAltText="Filter Barcode column" HeaderText="Barcode" SortExpression="Barcode" UniqueName="Barcode">
                     </telerik:GridBoundColumn>
-                    <telerik:GridBoundColumn DataField="ItemSize" FilterControlAltText="Filter ItemSize column" HeaderText="Item Size" SortExpression="ItemSize" UniqueName="ItemSize">
+                    <telerik:GridBoundColumn DataField="ItemSize" FilterControlAltText="Filter ItemSize column" HeaderText="Item Size" SortExpression="ItemSize" UniqueName="ItemSize" Display="False">
                         <ColumnValidationSettings>
                             <ModelErrorMessage Text=""></ModelErrorMessage>
                         </ColumnValidationSettings>
                     </telerik:GridBoundColumn>
-                    <telerik:GridBoundColumn DataField="Pack" FilterControlAltText="Filter Pack column" HeaderText="Pack" SortExpression="Pack" UniqueName="Pack">
+                    <telerik:GridBoundColumn DataField="Pack" FilterControlAltText="Filter Pack column" HeaderText="Pack" SortExpression="Pack" UniqueName="Pack" Display="False">
                         <ColumnValidationSettings>
                             <ModelErrorMessage Text=""></ModelErrorMessage>
                         </ColumnValidationSettings>
@@ -186,6 +189,14 @@
                             <ModelErrorMessage Text=""></ModelErrorMessage>
                         </ColumnValidationSettings>
                     </telerik:GridBoundColumn>
+                    <telerik:GridTemplateColumn DataField="Delete" FilterControlAltText="Filter Delete column" HeaderText="Delete" SortExpression="Delete" UniqueName="Delete">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="DeleteTextBox" runat="server" Text='<%# Bind("Delete") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:ImageButton ID="rbtDeleteGrid" runat="server" ImageUrl="~/Images/Delete.png" TabIndex="5" ToolTip="Delete" CommandName="GridDelete" />
+                        </ItemTemplate>
+                    </telerik:GridTemplateColumn>
                 </Columns>
             </MasterTableView>
         </telerik:RadGrid>

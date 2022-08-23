@@ -421,6 +421,19 @@
                 </td>
             </tr>
             <tr>
+                <td>
+                    <asp:Label ID="Label19" runat="server" Text="Report Format"></asp:Label>
+                </td>
+                <td>
+                    <telerik:RadComboBox ID="cmReportFormat" Runat="server">
+                        <Items>
+                            <telerik:RadComboBoxItem runat="server" Text="Daily Transaction" Value="Daily Transaction" />
+                            <telerik:RadComboBoxItem runat="server" Text="Daily Summary Report" Value="Daily Summary Report" />
+                        </Items>
+                    </telerik:RadComboBox>
+                </td>
+            </tr>
+            <tr>
                 <td>&nbsp;</td>
                 <td>
                     <telerik:RadButton ID="btnGenerate" runat="server" Text="Generate Report" OnClick="btnGenerate_Click">
