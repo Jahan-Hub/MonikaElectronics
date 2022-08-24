@@ -76,10 +76,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label1" runat="server" Text="Date"></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Text="Date" Visible="False"></asp:Label>
                     </td>
                     <td>
-                        <telerik:RadDatePicker ID="RadDatePicker1" runat="server" Width="100px">
+                        <telerik:RadDatePicker ID="RadDatePicker1" runat="server" Width="100px" Visible="False">
                             <DateInput runat="server" DisplayDateFormat="dd/MM/yyyy" DateFormat="dd/MM/yyyy" LabelWidth="40%">
                                 <EmptyMessageStyle Resize="None"></EmptyMessageStyle>
 
@@ -104,10 +104,10 @@
                 </tr>
                 <tr>
                     <td class="auto-style3">
-                        <asp:Label ID="Label22" runat="server" Text="Remarks"></asp:Label>
+                        <asp:Label ID="Label22" runat="server" Text="Remarks" Visible="False"></asp:Label>
                     </td>
                     <td colspan="3" class="auto-style3">
-                        <telerik:RadTextBox ID="txtRemarks" runat="server" TextMode="MultiLine" Width="400px">
+                        <telerik:RadTextBox ID="txtRemarks" runat="server" TextMode="MultiLine" Width="400px" Visible="False">
                         </telerik:RadTextBox>
                     </td>
                     <td class="auto-style3"></td>
@@ -115,16 +115,16 @@
                 </tr>
                 <tr>
                     <td colspan="6" class="auto-style2">
-                        <telerik:RadButton ID="btnSave" runat="server" Text="Return" OnClick="btnSave_Click" OnClientClicked="OnClientClicked" SingleClick="true" SingleClickText="Working...">
+                        <telerik:RadButton ID="btnSave" runat="server" Text="Return" OnClick="btnSave_Click" OnClientClicked="OnClientClicked" SingleClick="true" SingleClickText="Working..." Visible="False">
                         </telerik:RadButton>
-                        <telerik:RadButton ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click">
+                        <telerik:RadButton ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" Visible="False">
                         </telerik:RadButton>
+                    &nbsp;<asp:Label ID="lblMessage" runat="server" ForeColor="#CC0000"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <asp:Label ID="lblMessage" runat="server" ForeColor="#CC0000"></asp:Label>
-                    </td>
+                        &nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

@@ -144,7 +144,7 @@ namespace ElectronicsMS.Forms
             lblDueAmount.Text = "0.00";
             lblNetAmount.Text = "0.00";
             txtPercent.Text = "0";
-            dtSalesWithBarcode.Clear();
+            this.dtSalesWithBarcode.Clear();
             RadGrid1.Rebind();
         }
         public void ClearControlGranter()
@@ -165,6 +165,9 @@ namespace ElectronicsMS.Forms
         {
             try
             {
+                this.dtSales.Clear();
+                rgMain.Rebind();
+
                 con = new SqlConnection(ConfigurationManager.ConnectionStrings["ElectronicsCon"].ConnectionString);
                 con.Open();
                 cmd = new SqlCommand("Sp_Sales", con);
@@ -360,6 +363,7 @@ namespace ElectronicsMS.Forms
             if (!IsPostBack)
             {
                 ClearControl();
+                this.dtSales.Clear();
                 this.dtSalesWithBarcode.Clear();
                 ReloadMainGrid();
                 ViewState["salesid"] = "";
@@ -1215,7 +1219,7 @@ namespace ElectronicsMS.Forms
                     cmd.Transaction = myTran;
                     cmd.ExecuteNonQuery();
 
-                    for (int i = 0; i < dtSalesWithBarcode.Rows.Count; i++)
+                    for (int i = 0; i < this.dtSalesWithBarcode.Rows.Count; i++)
                     {
                         cmd = new SqlCommand("Sp_Sales", con);
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -1256,7 +1260,7 @@ namespace ElectronicsMS.Forms
 
         protected void rgMain_NeedDataSource(object sender, GridNeedDataSourceEventArgs e)
         {
-            rgMain.DataSource = dtSales;
+            rgMain.DataSource = this.dtSales;
         }
     }
 }

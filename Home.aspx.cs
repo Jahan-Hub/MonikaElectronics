@@ -47,6 +47,12 @@ namespace ElectronicsMS
                 }
                 con.Close();
             }
+
+            HtmlMeta meta = new HtmlMeta();
+            meta.HttpEquiv = "Refresh";
+            meta.Content = Convert.ToString(Session.Timeout * 20) + ";url=LogIn.aspx";
+            this.Page.Header.Controls.Add(meta);
+
             DateTime dt = DateTime.Now;
             string Day = dt.Day.ToString();
             string Month = dt.ToString("MMMM");
