@@ -10,7 +10,7 @@
 <head runat="server">
     <title></title>
     <script type="text/javascript" src="crystalreportviewers13/js/crviewer/crv.js"></script>
-    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-3.4.1.min.js"></script>
     <style type="text/css" media="print"></style>
 </head>
 <body>
@@ -31,10 +31,10 @@
                         <br />
                         <asp:Label ID="Label1" runat="server" Text="Please, Check the details before print/প্রিন্ট করার আগে ভালভাবে চেক করুন।" Font-Size="Larger" ForeColor="#990033"></asp:Label>
 
-                        <CR:CrystalReportViewer ID="CrystalReportViewer1" DisplayToolbar="False" runat="server" AutoDataBind="True" Height="1202px" ToolPanelWidth="200px" Width="1104px" />
+                        <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="True" />
                         <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label>
                         <br />
-                        <telerik:RadButton ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click"></telerik:RadButton>
+                        <telerik:RadButton ID="btnCancel" Visible="false" runat="server" Text="Cancel" OnClick="btnCancel_Click"></telerik:RadButton>
                     </center>
                 </ContentTemplate>
             </asp:UpdatePanel>
@@ -60,7 +60,7 @@
 </script>
 <script type="text/javascript">
     function RefreshParent() {
-        window.opener.location.href = "Forms/Dashboard.aspx";
+        window.opener.location.href = "Forms/Forms/Dashboard.aspx";
     }
     window.onbeforeunload = RefreshParent;
 </script>

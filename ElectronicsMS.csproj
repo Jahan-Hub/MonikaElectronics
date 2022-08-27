@@ -111,131 +111,166 @@
     <Compile Include="CRpreview.aspx.designer.cs">
       <DependentUpon>CRpreview.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\BankTransaction.aspx.cs">
+    <Compile Include="Forms\Forms\BankTransaction.aspx.cs">
       <DependentUpon>BankTransaction.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\BankTransaction.aspx.designer.cs">
+    <Compile Include="Forms\Forms\BankTransaction.aspx.designer.cs">
       <DependentUpon>BankTransaction.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CompanyInfo.aspx.cs">
+    <Compile Include="Forms\Forms\CompanyInfo.aspx.cs">
       <DependentUpon>CompanyInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\CompanyInfo.aspx.designer.cs">
+    <Compile Include="Forms\Forms\CompanyInfo.aspx.designer.cs">
       <DependentUpon>CompanyInfo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CustomerInfo.aspx.cs">
+    <Compile Include="Forms\Forms\CustomerInfo.aspx.cs">
       <DependentUpon>CustomerInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\CustomerInfo.aspx.designer.cs">
+    <Compile Include="Forms\Forms\CustomerInfo.aspx.designer.cs">
       <DependentUpon>CustomerInfo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Dashboard.aspx.cs">
+    <Compile Include="Forms\Forms\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\Dashboard.aspx.designer.cs">
+    <Compile Include="Forms\Forms\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DBBackup.aspx.cs">
+    <Compile Include="Forms\Forms\DBBackup.aspx.cs">
       <DependentUpon>DBBackup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\DBBackup.aspx.designer.cs">
+    <Compile Include="Forms\Forms\DBBackup.aspx.designer.cs">
       <DependentUpon>DBBackup.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Expense.aspx.cs">
+    <Compile Include="Forms\Forms\Expense.aspx.cs">
       <DependentUpon>Expense.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\Expense.aspx.designer.cs">
+    <Compile Include="Forms\Forms\Expense.aspx.designer.cs">
       <DependentUpon>Expense.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Inquiry.aspx.cs">
+    <Compile Include="Forms\Forms\Inquiry.aspx.cs">
       <DependentUpon>Inquiry.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\Inquiry.aspx.designer.cs">
+    <Compile Include="Forms\Forms\Inquiry.aspx.designer.cs">
       <DependentUpon>Inquiry.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\InvoiceWithBarcode.aspx.cs">
-      <DependentUpon>InvoiceWithBarcode.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\InvoiceWithBarcode.aspx.designer.cs">
-      <DependentUpon>InvoiceWithBarcode.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ItemInfo.aspx.cs">
+    <Compile Include="Forms\Forms\ItemInfo.aspx.cs">
       <DependentUpon>ItemInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\ItemInfo.aspx.designer.cs">
+    <Compile Include="Forms\Forms\ItemInfo.aspx.designer.cs">
       <DependentUpon>ItemInfo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LendBorrow.aspx.cs">
+    <Compile Include="Forms\Forms\LendBorrow.aspx.cs">
       <DependentUpon>LendBorrow.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\LendBorrow.aspx.designer.cs">
+    <Compile Include="Forms\Forms\LendBorrow.aspx.designer.cs">
       <DependentUpon>LendBorrow.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Mailing.aspx.cs">
+    <Compile Include="Forms\Forms\Mailing.aspx.cs">
       <DependentUpon>Mailing.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\Mailing.aspx.designer.cs">
+    <Compile Include="Forms\Forms\Mailing.aspx.designer.cs">
       <DependentUpon>Mailing.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MasterData.aspx.cs">
+    <Compile Include="Forms\Forms\MasterData.aspx.cs">
       <DependentUpon>MasterData.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\MasterData.aspx.designer.cs">
+    <Compile Include="Forms\Forms\MasterData.aspx.designer.cs">
       <DependentUpon>MasterData.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Notifications.aspx.cs">
+    <Compile Include="Forms\Forms\MoneyReceive.aspx.cs">
+      <DependentUpon>MoneyReceive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Forms\MoneyReceive.aspx.designer.cs">
+      <DependentUpon>MoneyReceive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Forms\Notifications.aspx.cs">
       <DependentUpon>Notifications.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\Notifications.aspx.designer.cs">
+    <Compile Include="Forms\Forms\Notifications.aspx.designer.cs">
       <DependentUpon>Notifications.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\OpeningBalanceCust.aspx.cs">
+    <Compile Include="Forms\Forms\OpeningBalanceCust.aspx.cs">
       <DependentUpon>OpeningBalanceCust.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\OpeningBalanceCust.aspx.designer.cs">
+    <Compile Include="Forms\Forms\OpeningBalanceCust.aspx.designer.cs">
       <DependentUpon>OpeningBalanceCust.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\OpeningBalanceSup.aspx.cs">
+    <Compile Include="Forms\Forms\OpeningBalanceSup.aspx.cs">
       <DependentUpon>OpeningBalanceSup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\OpeningBalanceSup.aspx.designer.cs">
+    <Compile Include="Forms\Forms\OpeningBalanceSup.aspx.designer.cs">
       <DependentUpon>OpeningBalanceSup.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\OpeningStock.aspx.cs">
+    <Compile Include="Forms\Forms\OpeningStock.aspx.cs">
       <DependentUpon>OpeningStock.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\OpeningStock.aspx.designer.cs">
+    <Compile Include="Forms\Forms\OpeningStock.aspx.designer.cs">
       <DependentUpon>OpeningStock.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PriceSetup.aspx.cs">
+    <Compile Include="Forms\Forms\Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Forms\Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Forms\PriceSetup.aspx.cs">
       <DependentUpon>PriceSetup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\PriceSetup.aspx.designer.cs">
+    <Compile Include="Forms\Forms\PriceSetup.aspx.designer.cs">
       <DependentUpon>PriceSetup.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PurchaseWithBarcode.aspx.cs">
-      <DependentUpon>PurchaseWithBarcode.aspx</DependentUpon>
+    <Compile Include="Forms\Forms\Purchase.aspx.cs">
+      <DependentUpon>Purchase.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\PurchaseWithBarcode.aspx.designer.cs">
-      <DependentUpon>PurchaseWithBarcode.aspx</DependentUpon>
+    <Compile Include="Forms\Forms\Purchase.aspx.designer.cs">
+      <DependentUpon>Purchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Forms\Sales.aspx.cs">
+      <DependentUpon>Sales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Forms\Sales.aspx.designer.cs">
+      <DependentUpon>Sales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Forms\SalesReturn.aspx.cs">
+      <DependentUpon>SalesReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Forms\SalesReturn.aspx.designer.cs">
+      <DependentUpon>SalesReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Forms\StockAdjustments.aspx.cs">
+      <DependentUpon>StockAdjustments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Forms\StockAdjustments.aspx.designer.cs">
+      <DependentUpon>StockAdjustments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Forms\SupplierInfo.aspx.cs">
+      <DependentUpon>SupplierInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Forms\SupplierInfo.aspx.designer.cs">
+      <DependentUpon>SupplierInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\ReportForms\DueList.aspx.cs">
       <DependentUpon>DueList.aspx</DependentUpon>
@@ -362,41 +397,6 @@
     </Compile>
     <Compile Include="Forms\ReportForms\rptSuppliers.aspx.designer.cs">
       <DependentUpon>rptSuppliers.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SalesReturn.aspx.cs">
-      <DependentUpon>SalesReturn.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\SalesReturn.aspx.designer.cs">
-      <DependentUpon>SalesReturn.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\StockAdjustments.aspx.cs">
-      <DependentUpon>StockAdjustments.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\StockAdjustments.aspx.designer.cs">
-      <DependentUpon>StockAdjustments.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SupplierInfo.aspx.cs">
-      <DependentUpon>SupplierInfo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\SupplierInfo.aspx.designer.cs">
-      <DependentUpon>SupplierInfo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\trnMoneyReceive.aspx.cs">
-      <DependentUpon>trnMoneyReceive.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\trnMoneyReceive.aspx.designer.cs">
-      <DependentUpon>trnMoneyReceive.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\trnPayment.aspx.cs">
-      <DependentUpon>trnPayment.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\trnPayment.aspx.designer.cs">
-      <DependentUpon>trnPayment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1373,24 +1373,29 @@
     <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_zh_TW.js" />
     <Content Include="crystalreportviewers13\urlreporting\activexviewer.js" />
     <Content Include="crystalreportviewers13\urlreporting\appletviewer.js" />
-    <Content Include="Forms\BankTransaction.aspx" />
-    <Content Include="Forms\CompanyInfo.aspx" />
-    <Content Include="Forms\CustomerInfo.aspx" />
-    <Content Include="Forms\Dashboard.aspx" />
-    <Content Include="Forms\DBBackup.aspx" />
-    <Content Include="Forms\Expense.aspx" />
-    <Content Include="Forms\Inquiry.aspx" />
-    <Content Include="Forms\InvoiceWithBarcode.aspx" />
-    <Content Include="Forms\ItemInfo.aspx" />
-    <Content Include="Forms\LendBorrow.aspx" />
-    <Content Include="Forms\Mailing.aspx" />
-    <Content Include="Forms\MasterData.aspx" />
-    <Content Include="Forms\Notifications.aspx" />
-    <Content Include="Forms\OpeningBalanceCust.aspx" />
-    <Content Include="Forms\OpeningBalanceSup.aspx" />
-    <Content Include="Forms\OpeningStock.aspx" />
-    <Content Include="Forms\PriceSetup.aspx" />
-    <Content Include="Forms\PurchaseWithBarcode.aspx" />
+    <Content Include="Forms\Forms\BankTransaction.aspx" />
+    <Content Include="Forms\Forms\CompanyInfo.aspx" />
+    <Content Include="Forms\Forms\CustomerInfo.aspx" />
+    <Content Include="Forms\Forms\Dashboard.aspx" />
+    <Content Include="Forms\Forms\DBBackup.aspx" />
+    <Content Include="Forms\Forms\Expense.aspx" />
+    <Content Include="Forms\Forms\Inquiry.aspx" />
+    <Content Include="Forms\Forms\ItemInfo.aspx" />
+    <Content Include="Forms\Forms\LendBorrow.aspx" />
+    <Content Include="Forms\Forms\Mailing.aspx" />
+    <Content Include="Forms\Forms\MasterData.aspx" />
+    <Content Include="Forms\Forms\MoneyReceive.aspx" />
+    <Content Include="Forms\Forms\Notifications.aspx" />
+    <Content Include="Forms\Forms\OpeningBalanceCust.aspx" />
+    <Content Include="Forms\Forms\OpeningBalanceSup.aspx" />
+    <Content Include="Forms\Forms\OpeningStock.aspx" />
+    <Content Include="Forms\Forms\Payment.aspx" />
+    <Content Include="Forms\Forms\PriceSetup.aspx" />
+    <Content Include="Forms\Forms\Purchase.aspx" />
+    <Content Include="Forms\Forms\Sales.aspx" />
+    <Content Include="Forms\Forms\SalesReturn.aspx" />
+    <Content Include="Forms\Forms\StockAdjustments.aspx" />
+    <Content Include="Forms\Forms\SupplierInfo.aspx" />
     <Content Include="Forms\ReportForms\DueList.aspx" />
     <Content Include="Forms\ReportForms\ReportManager.aspx" />
     <Content Include="Forms\ReportForms\rptBankTransactions.aspx" />
@@ -1409,11 +1414,6 @@
     <Content Include="Forms\ReportForms\rptStockNew.aspx" />
     <Content Include="Forms\ReportForms\rptStocks.aspx" />
     <Content Include="Forms\ReportForms\rptSuppliers.aspx" />
-    <Content Include="Forms\SalesReturn.aspx" />
-    <Content Include="Forms\StockAdjustments.aspx" />
-    <Content Include="Forms\SupplierInfo.aspx" />
-    <Content Include="Forms\trnMoneyReceive.aspx" />
-    <Content Include="Forms\trnPayment.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Images\Logo1.PNG" />
@@ -1756,7 +1756,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

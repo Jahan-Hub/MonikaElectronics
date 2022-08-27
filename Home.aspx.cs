@@ -63,7 +63,7 @@ namespace ElectronicsMS
             string Seconds = dt.ToString("ss");
             lblDateTime.Text = Day + " " + Month + "   " + Year + ",   " + Hour + ":" + Minute + ":" + Seconds;
             lblDayName.Text = DateTime.Now.DayOfWeek.ToString();
-            LoadIFrame("Forms/Dashboard.aspx");
+            LoadIFrame("Forms/Forms/Dashboard.aspx");
         }
 
         private void LoadIFrame(string src)
@@ -108,115 +108,110 @@ namespace ElectronicsMS
             RadPanelItem ItemClicked = e.Item; //Response.Write("Server event raised -- you clicked: " + ItemClicked.Text);
             string s = ItemClicked.Text;
 
-            if (s == "Employee Information")
-            {
-                LoadIFrame("Forms/EmployeeInfo.aspx");
-            }
-
             if (s == "Company Info")
             {
-                LoadIFrame("Forms/CompanyInfo.aspx");
+                LoadIFrame("Forms/Forms/CompanyInfo.aspx");
             }
             if (s == "Master Data")
             {
-                LoadIFrame("Forms/MasterData.aspx");
+                LoadIFrame("Forms/Forms/MasterData.aspx");
             }
             if (s == "Dashboard")
             {
-                LoadIFrame("Forms/Dashboard.aspx");
+                LoadIFrame("Forms/Forms/Dashboard.aspx");
             }
             if (s == "DB Backup")
             {
-                LoadIFrame("Forms/DBBackup.aspx");
+                LoadIFrame("Forms/Forms/DBBackup.aspx");
             }
             if (s == "Notifications")
             {
-                LoadIFrame("Forms/Notifications.aspx");
+                LoadIFrame("Forms/Forms/Notifications.aspx");
             }
             if (s == "Products")
             {
-                LoadIFrame("Forms/ItemInfo.aspx");
+                LoadIFrame("Forms/Forms/ItemInfo.aspx");
             }
             if (s == "Customers")
             {
-                LoadIFrame("Forms/CustomerInfo.aspx");
+                LoadIFrame("Forms/Forms/CustomerInfo.aspx");
             }
             if (s == "Suppliers")
             {
-                LoadIFrame("Forms/SupplierInfo.aspx");
+                LoadIFrame("Forms/Forms/SupplierInfo.aspx");
             }
             if (s == "Purchases")
             {
-                LoadIFrame("Forms/trnItemPurchase.aspx");
+                LoadIFrame("Forms/Forms/Purchase.aspx");
             }
             if (s == "Sales")
             {
-                LoadIFrame("Forms/trnItemSales.aspx");
+                LoadIFrame("Forms/Forms/Sales.aspx");
             }
             if (s == "Payments")
             {
-                LoadIFrame("Forms/trnPayment.aspx");
+                LoadIFrame("Forms/Forms/Payment.aspx");
             }
             if (s == "Money Received")
             {
-                LoadIFrame("Forms/trnMoneyReceive.aspx");
+                LoadIFrame("Forms/Forms/MoneyReceive.aspx");
             }
             if (s == "Sales Returns")
             {
-                LoadIFrame("Forms/SalesReturn.aspx");
+                LoadIFrame("Forms/Forms/SalesReturn.aspx");
             }
             if (s == "Expenses Entry")
             {
-                LoadIFrame("Forms/Expense.aspx");
+                LoadIFrame("Forms/Forms/Expense.aspx");
             }
             if (s == "Bank Transactions")
             {
-                LoadIFrame("Forms/BankTransaction.aspx");
+                LoadIFrame("Forms/Forms/BankTransaction.aspx");
             }
             if (s == "Emailing")
             {
-                LoadIFrame("Forms/Mailing.aspx");
+                LoadIFrame("Forms/Forms/Mailing.aspx");
             }
             if (s == "Price Offer")
             {
-                LoadIFrame("Forms/PriceOffer.aspx");
+                LoadIFrame("Forms/Forms/PriceOffer.aspx");
             }
             if (s == "Opening Stock")
             {
-                LoadIFrame("Forms/OpeningStock.aspx");
+                LoadIFrame("Forms/Forms/OpeningStock.aspx");
             }
             if (s == "Stock Adjustments")
             {
-                LoadIFrame("Forms/StockAdjustments.aspx");
+                LoadIFrame("Forms/Forms/StockAdjustments.aspx");
             }
             if (s == "Opening Balance(Cust)")
             {
-                LoadIFrame("Forms/OpeningBalanceCust.aspx");
+                LoadIFrame("Forms/Forms/OpeningBalanceCust.aspx");
             }
             if (s == "Opening Balance(Sup)")
             {
-                LoadIFrame("Forms/OpeningBalanceSup.aspx");
+                LoadIFrame("Forms/Forms/OpeningBalanceSup.aspx");
             }
             if (s == "Price Setup")
             {
-                LoadIFrame("Forms/PriceSetup.aspx");
+                LoadIFrame("Forms/Forms/PriceSetup.aspx");
             }
             if (s == "Lend/Borrow")
             {
-                LoadIFrame("Forms/LendBorrow.aspx");
+                LoadIFrame("Forms/Forms/LendBorrow.aspx");
             }
 
             if (s == "Sales (Scan)")
             {
-                LoadIFrame("Forms/InvoiceWithBarcode.aspx");
+                LoadIFrame("Forms/Forms/Sales.aspx");
             }
             if (s == "Purchase (Scan)")
             {
-                LoadIFrame("Forms/PurchaseWithBarcode.aspx");
+                LoadIFrame("Forms/Forms/Purchase.aspx");
             }
             if (s == "Inquiry")
             {
-                LoadIFrame("Forms/Inquiry.aspx");
+                LoadIFrame("Forms/Forms/Inquiry.aspx");
             }
 
 
